@@ -1,8 +1,0 @@
-Butoane login terms etc
-https://tympanus.net/Development/ButtonComponentMorph/index.html
-
-Index 
-https://tympanus.net/Development/MorphingBackgroundShapes/index.html
-
-Formular buy/complaints 
-https://tympanus.net/Development/FullscreenForm/
