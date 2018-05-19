@@ -9,14 +9,14 @@ a{
 }
 
 #title, #name, #meet, #irony, #contact{
-	font-size: 60px; 
+	font-size: 50px; 
 	top: 30%;
 	position: absolute;
 	opacity: 0; 
 }
 
 #name{
-	font-size: 35px;
+	font-size: 30px;
 	top: 37%;
 }
 
@@ -27,7 +27,7 @@ a{
 
 #irony{
 	font-size: 25px;
-	top: 58%;
+	top: 60%;
 }
 
 #contact{
