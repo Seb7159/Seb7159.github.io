@@ -12,9 +12,7 @@
   <meta name="theme-color" content="#E4DDF3" />
 
   <link rel="shortcut icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>  
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
 </head>
 <body id="body">
 
@@ -27,8 +25,9 @@
 
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script>
-  	var client = new XMLHttpRequest();
+	var client = new XMLHttpRequest();
 	client.open('GET', 'ip.txt');
 	client.onreadystatechange = function() {
 	document.getElementById("sebIP").href = client.responseText + "/myhaum";
