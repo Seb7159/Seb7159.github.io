@@ -1,8 +1,8 @@
 var DEBUG = 0; 
 
-var BIGCOL1 = 192, BIGCOL2 = 255,
-	SMALLCOL1 = 128, SMALLCOL2 = 192,
-	REFRESH_RATE = 50, SPEED = 1,
+var BIGCOL1 = 182, BIGCOL2 = 245,
+	SMALLCOL1 = 118, SMALLCOL2 = 182,
+	REFRESH_RATE = 200, SPEED = 1,
 	PREFIX = getCssValuePrefix(); 
 
 if( screen.width <= 1000 )
