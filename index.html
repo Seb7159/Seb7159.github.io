@@ -34,18 +34,18 @@
 		if( client.responseText ) {
 			actualAddress = "http://" + client.responseText + "/myhaum"; 
 			document.getElementById("sebIP").href = actualAddress; 
+		
+			if( client.responseText ) { 
+				var request = new XMLHttpRequest();
+				request.open('GET', actualAddress, false);
+				request.send(); 
+				if (request.status === 200) 
+				    window.location.replace(actualAddress); 
+				alert(request.status); 
+			}
 		} 
 	}
 	client.send(); 
-
-	if( client.responseText ) { 
-		var request = new XMLHttpRequest();
-		request.open('GET', actualAddress, false);
-		request.send(); 
-		if (request.status === 200) 
-		    window.location.replace(actualAddress); 
-		alert(request.status); 
-	}
 </script>
 <script src="js/salute.js"></script>
 <script src="js/background.js"></script>
