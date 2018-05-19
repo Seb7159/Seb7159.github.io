@@ -32,8 +32,8 @@
 	client.open('GET', 'ip.txt');
 	client.onreadystatechange = function() {
 		if( client.responseText ) {
-			actualAddress = "http://" + client.responseText + "/myhaum"; 
-			document.getElementById("sebIP").href = actualAddress; 
+			actualAddress = "http://" + client.responseText; 
+			document.getElementById("sebIP").href = actualAddress + "/myhaum"; 
 		 
 			var request = new XMLHttpRequest();
 			request.open('GET', actualAddress, false);
