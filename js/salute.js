@@ -1,6 +1,6 @@
 var hello = [
 		"Hi there.",
-		"Hey.",
+		"Hey!",
 		"Welcome!",
 		"Good day!"
 	],
