@@ -1,12 +1,11 @@
 var hello = [
-		"Hello there.",
 		"Hi there.",
+		"Hey.",
 		"Welcome!",
-		"Good day to you!"
+		"Good day!"
 	],
 	namen = [
 		"I am",
-		"Name's",
 		"My name is"
 	],
 	contact = [
@@ -57,7 +56,7 @@ $.get("http://ipinfo.io", function (response) {
 
 document.getElementById("title").innerHTML   =  hello[ rnd( 0, hello.length-1) ];
 document.getElementById("name").innerHTML    =  namen[ rnd( 0, namen.length-1) ] + " Sebastian.";
-document.getElementById("contact").innerHTML = "<a href='mailto:stanicisebastian@yahoo.com'> " + contact[ rnd( 0, contact.length-1) ] + " </a>";
+document.getElementById("contact").innerHTML = "<a href='mailto:stanicisebastian@gmail.com'> " + contact[ rnd( 0, contact.length-1) ] + " </a>";
 
 
 function rnd(min, max) {
