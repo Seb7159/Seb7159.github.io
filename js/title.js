@@ -1,6 +1,6 @@
 var CHANGE_OP = 0.0025,
 	LEFT = 50,
-	CHANGE_LEFT = 0.3,
+	CHANGE_LEFT = 0.4,
 	REFRESH_RATE = 50,
 	ANIM_NO = 1; 
 
@@ -26,21 +26,21 @@ function fadeIn(el) {
     else{
     	if(ANIM_NO==1){
     		ANIM_NO++; 
-    		CHANGE_LEFT = 0.1;
+    		CHANGE_LEFT = 0.2;
     		CHANGE_OP = 0.00001;
     		LEFT = 50;
     		fadeIn(document.getElementById("name"));
     	}
     	else if(ANIM_NO==2){
     		ANIM_NO++;
-    		CHANGE_LEFT = 0.04;
+    		CHANGE_LEFT = 0.1;
     		CHANGE_OP = 0.00001;
     		LEFT = 50; 
     		fadeIn(document.getElementById("meet"));
     	}
     	else if(ANIM_NO==3){
     		ANIM_NO++;
-    		CHANGE_LEFT = 0.02;
+    		CHANGE_LEFT = 0.1;
     		CHANGE_OP = 0.00001;
     		LEFT = 120; 
     		fadeIn(document.getElementById("irony"));

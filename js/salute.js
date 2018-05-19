@@ -10,8 +10,8 @@ var hello = [
 	],
 	contact = [
 		"Contact me.",
-		"Drop me an e-mail.",
-		"Send me a e-mail.",
+		"Mail me.",
+		"Send me an e-mail.",
 		"Fill my inbox!"
 	];
 
