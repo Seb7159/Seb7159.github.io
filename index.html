@@ -17,9 +17,10 @@
 <body id="body">
 
 <div id="title">   </div>
-<div id="name">    </div>
-<div id="meet"> And I am eager to create amazing projects. </div>
-<div id="irony"> One of it is <a id="sebIP"><b>myHaum</b></a>, a home security device. </div>
+<div id="name" >    </div>
+<div id="meet" > And I am eager to create amazing projects. </div>
+<div id="irony"> My Raspberry Pi server hosts <a id="sebIP">the unified version here</a>. 
+</div>
 <div id="contact"> </div>
 
 
@@ -33,14 +34,8 @@
 	client.onreadystatechange = function() {
 		if( client.responseText ) {
 			actualAddress = "http://" + client.responseText; 
-			document.getElementById("sebIP").href = actualAddress + "/myhaum"; 
-		 
-			var request = new XMLHttpRequest();
-			request.open('GET', actualAddress, false);
-			request.send(); 
-			if (request.status === 200) 
-			    window.location.replace(actualAddress); 
-			alert(request.status); 
+			document.getElementById("haumIP").href = actualAddress + "/myhaum"; 
+			document.getElementById("sebIP").href  = actualAddress; 
 		} 
 	}
 	client.send(); 
