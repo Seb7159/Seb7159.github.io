@@ -16,7 +16,7 @@ var hello = [
 	];
 
 	// In case the user's country is different than an English-speaking one 
-$.get("http://ipinfo.io", function (response) {
+$.get("https://ipinfo.io", function (response) {
 	var ctry = response.country;
 	// Default is GB - English language salute 
 	if( ctry == "ES" ){
