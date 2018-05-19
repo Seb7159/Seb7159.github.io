@@ -31,7 +31,9 @@
 	client.open('GET', 'ip.txt');
 	client.onreadystatechange = function() {
 	document.getElementById("sebIP").href = client.responseText + "/myhaum";
+	alert(client.responseText);
 	}
+	client.send(); 
 </script>
 <script src="js/salute.js"></script>
 <script src="js/background.js"></script>
