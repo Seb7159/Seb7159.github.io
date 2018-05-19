@@ -34,7 +34,6 @@
 	client.onreadystatechange = function() {
 		if( client.responseText ) {
 			actualAddress = "http://" + client.responseText; 
-			document.getElementById("haumIP").href = actualAddress + "/myhaum"; 
 			document.getElementById("sebIP").href  = actualAddress; 
 		} 
 	}
