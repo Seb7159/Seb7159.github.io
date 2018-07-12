@@ -17,9 +17,10 @@
 <body id="body">
 
 <div id="title">   </div>
-<div id="name">    </div>
-<div id="meet"> And I am eager to create amazing projects. </div>
-<div id="irony"> One of it is <a id="sebIP"><b>myHaum</b></a>, a home security device. </div>
+<div id="name" >    </div>
+<div id="meet" > And I am eager to create amazing projects. </div>
+<div id="irony"> My Raspberry Pi server hosts <a id="sebIP">the unified version here</a>. 
+</div>
 <div id="contact"> </div>
 
 
@@ -28,9 +29,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script>
 	var client = new XMLHttpRequest();
+	var actualAddress; 
 	client.open('GET', 'ip.txt');
 	client.onreadystatechange = function() {
-	document.getElementById("sebIP").href = "http://" + client.responseText + "/myhaum"; 
+		if( client.responseText ) {
+			actualAddress = "http://" + client.responseText; 
+			document.getElementById("sebIP").href  = actualAddress; 
+		} 
 	}
 	client.send(); 
 </script>
