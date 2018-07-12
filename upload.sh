@@ -11,6 +11,7 @@ then
 
 	#Send new IP on github project  
 	sleep 1m
+	git fetch
 	curl icanhazip.com > ip.txt
 	git add ip.txt 
 	git commit -m "Cron job updated Raspberry's IP" --allow-empty
