@@ -1,0 +1,55 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { 
+	text-align: center; 
+	font-family: "Times New Roman", Times, serif; 
+	font-size: 20px; 
+}
+#user {
+	color: black;
+}
+#robot {
+	color: aqua; 
+}
+</style>
+
+
+<div id="text-box">
+	<p id='robot'> <span id="welcomeMessage"> </span>  </p>
+</div>
+<div id="write-box">
+	<input placeholder="Type here.." type="text" id="text-input">
+	<button onclick="runme()"> Say! </button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var div = document.getElementById('text-box'); 
+
+	var welcomeMessages = ["Hey there. Can I help?", "Hi. How's life?", "Heya. How's it going?", "Hello. You alright?"]; 
+	var randomNumber = Math.floor(Math.random() * welcomeMessages.length); 
+	document.getElementById('welcomeMessage').innerHTML = welcomeMessages[randomNumber]; 
+	console.log(randomNumber); 
+
+	function runme(){
+		var typed = document.getElementById('text-input').value;
+		if(typed=="") return 0; 
+		var encodedTyped = typed.replace(/\s+/g, ',').toLowerCase();  
+		document.getElementById('text-input').value = ""; 
+
+		var requestURL = "http://" + location.host + ":1880/c?m=" + encodedTyped;
+		var replyConnor = $.get({type: "GET", url: "getConnor.php?t=" + requestURL, async: false}).responseText;
+
+		div.innerHTML += "<p id='user'>" + typed + "</p>"; 
+		div.innerHTML += "<p id='robot'>" + replyConnor + "</p>"; 
+	}
+
+	var input = document.getElementById("text-input");
+	input.addEventListener("keyup", function(event) {
+		event.preventDefault();
+		if (event.keyCode === 13) 
+			runme(); 		  
+	});
+</script> 
+</html> 
