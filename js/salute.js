@@ -1,16 +1,17 @@
 var hello = [
-		"Hi there.",
-		"Hey!",
-		"Welcome!",
-		"Good day!"
+		"Hi there",
+		"Hey",
+		"Welcome",
+		"Good day to you"
 	],
 	namen = [
 		"I am",
-		"My name is"
+		"The name is",
+		"Call me"
 	],
 	contact = [
 		"Contact me.",
-		"Mail me.",
+		"Email me.",
 		"Send me an e-mail.",
 		"Fill my inbox!"
 	];
@@ -22,14 +23,14 @@ $.get("https://ipinfo.io", function (response) {
 	if( ctry == "ES" ){
 		hello[0] = "¡Hola!";
 		hello[1] = "¡Bienvenida!";
-		hello[2] = "¿Qué onda, microonda?";
+		hello[2] = "¿Que tal?";
 		hello[3] = "¡Saludos!";
 	}
 	else if( ctry == "RO" ){
 		hello[0] = "Bun venit!";
-		hello[1] = "Buna!";
-		hello[2] = "Saru' mana!";
-		hello[3] = "Salut!";
+		hello[1] = "Buna ziua!";
+		hello[2] = "Va salut!";
+		hello[3] = "Salutare!";
 	}
 	else if( ctry == "FR" ){
 		hello[0] = "Bonjour!";
@@ -47,7 +48,7 @@ $.get("https://ipinfo.io", function (response) {
 		hello[0] = "Guten Tag!";
 		hello[1] = "Wie geht es dir?";
 		hello[2] = "Servus!";
-		hello[3] = "Grüß Dich!";
+		hello[3] = "Hallo!";
 	}
 
 	document.getElementById("title").innerHTML   =  hello[ rnd( 0, hello.length-1) ];
@@ -55,7 +56,7 @@ $.get("https://ipinfo.io", function (response) {
 
 
 document.getElementById("title").innerHTML   =  hello[ rnd( 0, hello.length-1) ];
-document.getElementById("name").innerHTML    =  namen[ rnd( 0, namen.length-1) ] + " Sebastian.";
+document.getElementById("name").innerHTML    =  namen[ rnd( 0, namen.length-1) ] + " Seb.";
 document.getElementById("contact").innerHTML = "<a href='mailto:stanicisebastian@gmail.com'> " + contact[ rnd( 0, contact.length-1) ] + " </a>";
 
 
