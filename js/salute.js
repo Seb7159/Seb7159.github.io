@@ -10,10 +10,10 @@ var hello = [
 		"Call me"
 	],
 	contact = [
-		"Contact me.",
-		"Email me.",
-		"Send me an e-mail.",
-		"Fill my inbox!"
+		"Drop a DM",
+		"Email me",
+		"Send me an e-mail",
+		"Fill my inbox"
 	];
 
 	// In case the user's country is different than an English-speaking one 
@@ -57,7 +57,7 @@ $.get("https://ipinfo.io", function (response) {
 
 document.getElementById("title").innerHTML   =  hello[ rnd( 0, hello.length-1) ];
 document.getElementById("name").innerHTML    =  namen[ rnd( 0, namen.length-1) ] + " Seb.";
-document.getElementById("contact").innerHTML = "<a href='mailto:stanicisebastian@gmail.com'> " + contact[ rnd( 0, contact.length-1) ] + " </a>";
+document.getElementById("contact").innerHTML = "<a href='mailto:stanicisebastian@gmail.com'> " + contact[ rnd( 0, contact.length-1) ] + " </a>.";
 
 
 function rnd(min, max) {
